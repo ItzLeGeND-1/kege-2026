@@ -1,9 +1,9 @@
 from string import printable
-o=[]
-for x in range(1,66):
-    for y in range(1,x-1):
-        num1=int(f'73{printable[x]}1{printable[y]}',67)
-        num2=int(f'49{printable[y]}6',x)
+o=set()
+for x in range(10,67):
+    for y in range(0,x):
+        num1=7*67**4 + 3*67**3 + x*67**2 + 1*67**1 + y
+        num2=4*67**3 + 9*67**2 + y*67**1 + 6
         num=num1+num2
-        o+=[num,num//(x+y)]
-print(o)
+        o.add(num)
+print(len(set(o)))
