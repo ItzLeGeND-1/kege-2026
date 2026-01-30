@@ -33,7 +33,7 @@ def convert(num, sys):
         # Получаем новую целую часть
         num //= sys
     # Переворачиваем строку (записываем остатки в обратном порядке)
-    return res[::-1]
+    return res[::-1] if res else '0'
 
 # Перевод в любую систему (2 <= sys <= 36)
 from string import printable as alph
