@@ -29,3 +29,22 @@ for l in range(0, 4):
         val = '1234' + ''.join(val) + '7'
         if int(val) % 141 == 0:
             print(val, int(val) // 141)
+# ПОИСК МНОЖИТЕЛЕЙ ЧИСЛА
+            # ЛУЧШИЙ СПОСОБ
+def fact_3(num):
+            d = []
+            while num % 2 == 0:
+                    d += [2]
+                    num //=2
+            i = 3
+            while i * i <= num:
+                    while num % i == 0:
+                        d += [i]
+                        num //= i
+                    i += 2
+            if num > 2:
+                    d += [num]
+            return d
+
+
+            print(fact_3(9442424594444))

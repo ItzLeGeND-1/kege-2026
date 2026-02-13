@@ -10,7 +10,7 @@ def f(num):
         if num%i==0:
             if is_prime(i): d|={i}
             if is_prime(num//i): d |={num//i}
-    if len(d)>2:
+    if len(d)>=2:
         M=min(d)+max(d)
         if M>2000 and M%10==8:
             return M

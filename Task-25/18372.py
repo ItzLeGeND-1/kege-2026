@@ -1,10 +1,11 @@
 def f(num):
     d=set()
-    for i in range(1,int(num**.5)+1):
+    for i in range(2,int(num**.5)+1):
         if num%i==0:
             d|={i,num//i}
-        A=sum(d)//len(d)
-        if str(A)[-2:]=='12':
+    if len(d)>1:
+     A=(sum(d)+1)//(len(d)+1)
+     if str(A)[-2:]=='12':
             return A
     return 0
 cnt=0
