@@ -22,3 +22,10 @@ for N in range(1,10**10):
     if 356984*I>= 54*2**20:
         print(N)
         break
+for L in range(1,10**10):
+    N=52+10+500
+    i=ceil(log2(N))
+    I=ceil(L*i/8)
+    if 45877*I> 49*2**20:
+        print(I)
+        break
