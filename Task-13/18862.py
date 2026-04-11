@@ -8,3 +8,5 @@ for ip in net:
     if ip.count('0')>15:
         cnt+=1
 print(cnt)
+net=ip_network('192.128.0.34/255.255.255.240', False)
+print(*net)
