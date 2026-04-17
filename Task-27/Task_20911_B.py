@@ -1,0 +1,17 @@
+from math import dist
+def center(claster):
+    res=[]
+    for dot in claster:
+        sum_dot=sum(dist(dot,d)for d in claster)
+        res.append([sum_dot,dot])
+    return min(res)[1]
+with open(r'.\files\27_B_20911.txt') as file:
+    dots=[list(map(float,i.replace(',','.').split()))for i in file]
+cla1=[dot for dot in dots if dot[1]>5]
+cla2=[dot for dot in dots if -6<dot[1]<5]
+cla3=[dot for dot in dots if dot[1]<-6]
+center1=center(cla1)
+center2=center(cla2)
+center3=center(cla3)
+print(abs((center1[0]+center2[0]+center3[0])/3*10000))
+print(abs((center1[1]+center2[1]+center3[1])/3*10000))
