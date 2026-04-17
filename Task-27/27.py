@@ -1,5 +1,5 @@
 cla0=[];cla1=[]
-for n in open('27A_24562.txt'):
+for n in open('Files/27A_24562.txt'):
     x,y=[float(d)for d in n.replace(',','.').split()]
     if  y>0: cla0+=[(x,y)]
     else: cla1+=[(x,y)]
