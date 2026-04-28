@@ -6,7 +6,7 @@ def center(cluster):
         sum_dist= sum(dist(dot,d)for d in cluster)
         res.append([sum_dist,dot])
     return min(res)[1]
-with open(r'.\files\27_B_29074.txt') as file:
+with open(r'.\files\27_A_29076.txt') as file:
     dots=[]
     stars=[]
     for i in file:
@@ -20,4 +20,7 @@ claster2=[d for d in dots if d[1]<8]
 stars1=[d for d in stars if d[1]>8]
 stars2=[d for d in stars if d[1]<8]
 
-print([len(stars1),len(stars2)])
+center1=center(claster1)
+center2=center(claster2)
+print(center1[0]*10000)
+print(center2[1]*10000)
