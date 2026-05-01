@@ -29,4 +29,4 @@ f=[0]*16000
 for n in range(15994):
     if n<43: f[n]=g[n+4]
     else: f[n]=2*f[n-2]-f[n-4]+2
-print(f[2026])
+#print(f[2026])
