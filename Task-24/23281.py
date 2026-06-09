@@ -1,4 +1,3 @@
-with open(r'files/24_23281.txt') as file:
     data=file.readline()
 data=data.split('Y')
 ans=0
