@@ -1,9 +1,28 @@
 with open(r'../../files/26_9793.txt') as file:
     N=int(file.readline())
-    details=[list(map(int,i.split()))for i in file]
+    pieces=[]
+    for pos,data in enumerate(file,start=1):
+        time_1,time_2=map(int,data.split())
+        pieces.append([time_1,'s',pos])
+        pieces.append([time_2,'o',pos])
+pieces=sorted(pieces)
+conveyor=[0]*N
 
-details=sorted(details,key=lambda x:(x[0],x[1]))
-print(max(details))
+left,right=0, N-1
+last_piece=0
+cnt_o=0
 
+for piece in pieces:
+    if piece[2] in conveyor:
+        continue
+    if piece[1]=='s':
+        conveyor[left]=piece[2]
+        left+=1
+        cnt_o+=1
+    else:
+        conveyor[right]=piece[2]
+        right-=1
+    last_piece=piece
+print(cnt_o-1 if last_piece[1]=='s'else 0,last_piece[2])
 
 
