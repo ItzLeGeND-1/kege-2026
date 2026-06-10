@@ -23,6 +23,6 @@ for piece in pieces:
         conveyor[right]=piece[2]
         right-=1
     last_piece=piece
-print(cnt_o-1 if last_piece[1]=='s'else 0,last_piece[2])
+print(last_piece[2], cnt_o-1 if last_piece[1]=='s'else 0)
 
 
