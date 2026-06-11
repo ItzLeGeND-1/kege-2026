@@ -40,11 +40,8 @@ with open(r'../../files/26_9793.txt') as file:
             pieces.append([time_2,'s',pos])
 pieces=sorted(pieces)
 
-
-
 last_piece=pieces[-1]
 cnt=sum(1 for peace in pieces if pieces[1]=='s')
-
 
 print(last_piece[2], cnt_o-1 if last_piece[1]=='s'else 0)
 
