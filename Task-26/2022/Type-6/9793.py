@@ -37,11 +37,11 @@ with open(r'../../files/26_9793.txt') as file:
         if min(time_1,time_2)==time_1:
             pieces.append([time_1,'s',pos])
         if min(time_1,time_2)==time_2:
-            pieces.append([time_2,'s',pos])
+            pieces.append([time_2,'o',pos])
 pieces=sorted(pieces)
 
 last_piece=pieces[-1]
 cnt=sum(1 for peace in pieces if pieces[1]=='s')
 
-print(last_piece[2], cnt_o-1 if last_piece[1]=='s'else 0)
+print(last_piece[2], cnt-1 if last_piece[1]=='s'else 0)
 
