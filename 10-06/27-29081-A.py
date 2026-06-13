@@ -5,7 +5,7 @@ def center(cluster):
         sum_dot=sum(dist(dot,d)for d in cluster)
         res.append([sum_dot,dot])
     return min(res)[1]
-with open(r'../10-06/27_A_29081.txt') as file:
+with open(r'27_A_29081.txt') as file:
     dots=[]
     stars=[]
     for i in file:

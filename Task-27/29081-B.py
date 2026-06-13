@@ -1,6 +1,6 @@
 from itertools import combinations
 from math import dist
-with open(r'.\files\27_B_29081.txt') as file:
+with open(r'../10-06/27_B_29081.txt') as file:
     dots=[]
     stars=[]
     for i in file:
